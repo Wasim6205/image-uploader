@@ -20,9 +20,9 @@ export default function Home() {
     }  
   }
   return (
-    <main>
-      <h1>Upload Image</h1>
-      <form onSubmit={uploadImage}>
+    <main className="flex items-center justify-center bg-black text-white flex-col gap-8 h-[100vh]">
+      <h1 className="text-2xl">Upload Image</h1>
+      <form onSubmit={uploadImage} className="flex flex-col gap-8">
         <input type="file" name="file" onChange={(e) => setFile(e.target.files?.[0])} />
         <button type="submit" className="border px-3 py-2 bg-gray-500 text-white">Upload Image</button>
       </form>
